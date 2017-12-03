@@ -13,7 +13,7 @@ Calling the constructor publicly is not allowed. The constructor
 is private and is only called by this Instance function.
 */
 
-Singleton* Singleton::Instance()
+Singleton* Singleton::Instance(const& Skeleton)
 {
 	if (!Singleton::m_pInstance)   // Only allow one instance of class to be generated.
 		Singleton::m_pInstance = new Singleton;
@@ -23,7 +23,7 @@ Singleton* Singleton::Instance()
 
 void Singleton::writeToLogFile()
 {
-	cout << "Hello Singleton world" << endl;
+	cout << "Hello Singleton world"/n << endl;
 }
 
 int Singleton::kiekis(char sm)
@@ -47,7 +47,7 @@ char Singleton::getChar()
 	char ch;
 
 	cout<<"Iveskite norima raide:"<<endl;
-	cin>>ch;
+	cin>>ch>>endl;
 	
 	return ch;
 
